@@ -42,17 +42,27 @@ const FudbalerCard = ({
       <div
         className={`relative rounded-lg bg-gray-300 outline outline-0 outline-orange-600 duration-150 group-focus:outline-4`}
       >
-        <div className="absolute right-0 top-0 flex aspect-square w-5 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded bg-orange-600 text-center text-xs text-white">
+        <div className="absolute right-0 top-0 flex aspect-square w-5 -translate-y-1/2 translate-x-1/2 items-center justify-center overflow-hidden rounded bg-orange-600 text-center text-xs text-white">
           {fudbaler?.cena}
         </div>
-        <User size={50} className="text-gray-700" />
+        {fudbaler?.slika ? (
+          <Image
+            width={50}
+            height={50}
+            className="z-10 aspect-square rounded-lg object-cover"
+            alt=""
+            src={`/slikeFudbalera/${fudbaler.slika}.jpeg`}
+          />
+        ) : (
+          <User size={50} className="text-gray-700" />
+        )}
       </div>
       <div className="absolute left-1/2 top-[calc(100%_+_8px)] flex -translate-x-1/2 flex-col items-center gap-1 pl-1">
         <p className="select-none text-center text-sm font-semibold text-gray-800">
           {fudbaler ? (
             <> {fudbaler?.ime + " " + fudbaler?.prezime}</>
           ) : (
-            "Aleksa Tesic"
+            "Fudbaler"
           )}
         </p>
         <motion.div

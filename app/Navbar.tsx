@@ -79,7 +79,7 @@ const Navbar = async () => {
             )}
             <div className="gap- flex flex-col items-start justify-center">
               <h2 className="font-medium text-gray-300">
-                {user?.name || "Aleksa Tesic"}
+                {user?.name || "sa ljubavlju od mene :)"}
               </h2>
               <div className="flex items-center gap-1 text-sm">
                 {" "}

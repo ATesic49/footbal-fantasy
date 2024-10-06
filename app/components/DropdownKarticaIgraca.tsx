@@ -6,6 +6,7 @@ import { Fudbaler } from "@prisma/client";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { Coins, Repeat2, User } from "lucide-react";
 import { UpdateSession, useSession } from "next-auth/react";
+import Image from "next/image";
 
 import React, { useState } from "react";
 interface DropdownKarticaIgracaProps {
@@ -59,7 +60,17 @@ const DropdownKarticaIgraca = ({
         <div
           className={`relative rounded-lg bg-gray-300 outline outline-0 outline-orange-600 duration-150 group-focus:outline-4`}
         >
-          <User size={50} className="text-gray-700" />
+          {fudbaler?.slika ? (
+            <Image
+              width={50}
+              height={50}
+              className="z-10 aspect-square rounded-lg object-cover"
+              alt=""
+              src={`/slikeFudbalera/${fudbaler.slika}.jpeg`}
+            />
+          ) : (
+            <User size={50} className="text-gray-700" />
+          )}
         </div>
         <div className="flex h-full flex-col items-start justify-start gap-1">
           <h3 className="font-medium text-gray-700">
