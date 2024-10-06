@@ -20,6 +20,7 @@ export default async function SignInPage(props: {
     <div className="flex h-[80vh] w-full items-center justify-center">
       {Object.values(providerMap).map((provider) => (
         <form
+          key={provider.id}
           action={async () => {
             "use server";
             try {
