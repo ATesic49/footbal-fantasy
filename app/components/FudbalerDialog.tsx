@@ -46,9 +46,9 @@ const FudbalerDialog = ({ fudbaler, sviFudbaleri }: FudbalerDialogProps) => {
           {sviFudbaleri?.map((fudbalerr) => {
             if (
               fudbalerr.ime.toLowerCase().includes(input.toLowerCase()) ||
-              fudbaler.prezime.toLowerCase().includes(input.toLowerCase()) ||
-              fudbaler.nadimak?.toLowerCase().includes(input.toLowerCase()) ||
-              fudbaler.odeljenje.toLowerCase().includes(input.toLowerCase())
+              fudbalerr.prezime.toLowerCase().includes(input.toLowerCase()) ||
+              fudbalerr.nadimak?.toLowerCase().includes(input.toLowerCase()) ||
+              fudbalerr.odeljenje.toLowerCase().includes(input.toLowerCase())
             ) {
               if (fudbaler.golman) {
                 if (!fudbalerIds?.includes(fudbalerr.id) && fudbalerr.golman) {
