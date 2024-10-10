@@ -65,6 +65,7 @@ const DropdownKarticaIgraca = ({
               width={50}
               height={50}
               className="z-10 aspect-square rounded-lg object-cover"
+              quality={90}
               alt=""
               src={`/slikeFudbalera/${fudbaler.slika}.jpeg`}
             />
