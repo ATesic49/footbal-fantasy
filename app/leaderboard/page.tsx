@@ -12,8 +12,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 
-import { GetStaticProps } from "next";
-import { User } from "@prisma/client";
 import { User as UserImg } from "lucide-react";
 import { redirect } from "next/navigation";
 import getSession from "@/lib/getSession";
